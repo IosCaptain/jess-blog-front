@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Article} from "./article";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jess-blog-front';
+  // allArticles: Article[] | undefined;
 }
