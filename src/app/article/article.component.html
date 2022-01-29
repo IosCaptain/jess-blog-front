@@ -12,65 +12,142 @@
           <!-- Post title-->
           <h1 class="fw-bolder mb-1">{{article.title}}</h1>
           <!-- Post meta content-->
-          <div class="text-muted fst-italic mb-2">Posted on January 1, 2021 by Start Bootstrap</div>
+          <div class="text-muted fst-italic mb-2">Posted {{article.date}} by Jessica Nemire</div>
           <!-- Post categories-->
           <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
           <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
         </header>
         <!-- Preview image figure-->
         <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
-        <!-- Post content-->
+        <!-- Post content I did this before realizing you can store arrays in a database-->
         <section class="mb-5">
-          <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe.</p>
-          <p class="fs-5 mb-4">The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different question, and we'll see if we find that.</p>
-          <p class="fs-5 mb-4">If you get asteroids about a kilometer in size, those are large enough and carry enough energy into our system to disrupt transportation, communication, the food chains, and that can be a really bad day on Earth.</p>
-          <h2 class="fw-bolder mb-4 mt-5">I have odd cosmic thoughts every day</h2>
-          <p class="fs-5 mb-4">For me, the most fascinating interface is Twitter. I have odd cosmic thoughts every day and I realized I could hold them to myself or share them with people who might be interested.</p>
-          <p class="fs-5 mb-4">Venus has a runaway greenhouse effect. I kind of want to know what happened there because we're twirling knobs here on Earth without knowing the consequences of it. Mars once had running water. It's bone dry today. Something bad happened there as well.</p>
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par1title">{{article.par1title}}</h2>
+          <img src="{{article.par1picture}}" *ngIf="article.par1picture">
+          <p class="fs-5 mb-4">{{article.par1body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par2title">{{article.par2title}}</h2>
+          <img src="{{article.par2picture}}" *ngIf="article.par2picture">
+          <p class="fs-5 mb-4" *ngIf="article.par2body">{{article.par2body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par3title">{{article.par3title}}</h2>
+          <img src="{{article.par3picture}}" *ngIf="article.par3picture">
+          <p class="fs-5 mb-4" *ngIf="article.par3body">{{article.par3body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par4title">{{article.par4title}}</h2>
+          <img src="{{article.par4picture}}" *ngIf="article.par4picture">
+          <p class="fs-5 mb-4" *ngIf="article.par4body">{{article.par4body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par5title">{{article.par5title}}</h2>
+          <img src="{{article.par5picture}}" *ngIf="article.par5picture">
+          <p class="fs-5 mb-4" *ngIf="article.par5body">{{article.par5body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par6title">{{article.par6title}}</h2>
+          <img src="{{article.par6picture}}" *ngIf="article.par6picture">
+          <p class="fs-5 mb-4" *ngIf="article.par6body">{{article.par6body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par7title">{{article.par7title}}</h2>
+          <img src="{{article.par7picture}}" *ngIf="article.par7picture">
+          <p class="fs-5 mb-4" *ngIf="article.par7body">{{article.par7body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par8title">{{article.par8title}}</h2>
+          <img src="{{article.par8picture}}" *ngIf="article.par8picture">
+          <p class="fs-5 mb-4" *ngIf="article.par8body">{{article.par8body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par9title">{{article.par9title}}</h2>
+          <img src="{{article.par9picture}}" *ngIf="article.par9picture">
+          <p class="fs-5 mb-4" *ngIf="article.par9body">{{article.par9body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par10title">{{article.par10title}}</h2>
+          <img src="{{article.par10picture}}" *ngIf="article.par10picture" width="60%">
+          <p class="fs-5 mb-4" *ngIf="article.par10body">{{article.par10body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par11title">{{article.par11title}}</h2>
+          <img src="{{article.par11picture}}" *ngIf="article.par11picture">
+          <p class="fs-5 mb-4" *ngIf="article.par11body">{{article.par11body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par12title">{{article.par12title}}</h2>
+          <img src="{{article.par12picture}}" *ngIf="article.par12picture">
+          <p class="fs-5 mb-4" *ngIf="article.par12body">{{article.par12body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par13title">{{article.par13title}}</h2>
+          <img src="{{article.par13picture}}" *ngIf="article.par13picture">
+          <p class="fs-5 mb-4" *ngIf="article.par13body">{{article.par13body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par14title">{{article.par14title}}</h2>
+          <img src="{{article.par14picture}}" *ngIf="article.par14picture">
+          <p class="fs-5 mb-4" *ngIf="article.par14body">{{article.par14body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par15title">{{article.par15title}}</h2>
+          <img src="{{article.par15picture}}" *ngIf="article.par15picture">
+          <p class="fs-5 mb-4" *ngIf="article.par15body">{{article.par15body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par16title">{{article.par16title}}</h2>
+          <img src="{{article.par16picture}}" *ngIf="article.par16picture">
+          <p class="fs-5 mb-4" *ngIf="article.par16body">{{article.par16body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par17title">{{article.par17title}}</h2>
+          <img src="{{article.par17picture}}" *ngIf="article.par17picture">
+          <p class="fs-5 mb-4" *ngIf="article.par17body">{{article.par17body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par18title">{{article.par18title}}</h2>
+          <img src="{{article.par18picture}}" *ngIf="article.par18picture">
+          <p class="fs-5 mb-4" *ngIf="article.par18body">{{article.par18body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par19title">{{article.par19title}}</h2>
+          <img src="{{article.par19picture}}" *ngIf="article.par19picture">
+          <p class="fs-5 mb-4" *ngIf="article.par19body">{{article.par19body}}</p>
+
+          <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par20title">{{article.par20title}}</h2>
+          <img src="{{article.par20picture}}" *ngIf="article.par20picture">
+          <p class="fs-5 mb-4" *ngIf="article.par20body">{{article.par20body}}</p>
+
+
+
+
         </section>
       </article>
-      <!-- Comments section-->
-      <section class="mb-5">
-        <div class="card bg-light">
-          <div class="card-body">
-            <!-- Comment form-->
-            <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
-            <!-- Comment with nested comments-->
-            <div class="d-flex mb-4">
-              <!-- Parent comment-->
-              <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-              <div class="ms-3">
-                <div class="fw-bold">Commenter Name</div>
-                If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks.
-                <!-- Child comment 1-->
-                <div class="d-flex mt-4">
-                  <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                  <div class="ms-3">
-                    <div class="fw-bold">Commenter Name</div>
-                    And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
-                  </div>
-                </div>
-                <!-- Child comment 2-->
-                <div class="d-flex mt-4">
-                  <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                  <div class="ms-3">
-                    <div class="fw-bold">Commenter Name</div>
-                    When you put money directly to a problem, it makes a good headline.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Single comment-->
-            <div class="d-flex">
-              <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-              <div class="ms-3">
-                <div class="fw-bold">Commenter Name</div>
-                When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<!--      &lt;!&ndash; Comments section&ndash;&gt;-->
+<!--      <section class="mb-5">-->
+<!--        <div class="card bg-light">-->
+<!--          <div class="card-body">-->
+<!--            &lt;!&ndash; Comment form&ndash;&gt;-->
+<!--            <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>-->
+<!--            &lt;!&ndash; Comment with nested comments&ndash;&gt;-->
+<!--            <div class="d-flex mb-4">-->
+<!--              &lt;!&ndash; Parent comment&ndash;&gt;-->
+<!--              <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>-->
+<!--              <div class="ms-3">-->
+<!--                <div class="fw-bold">Commenter Name</div>-->
+<!--                If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks.-->
+<!--                &lt;!&ndash; Child comment 1&ndash;&gt;-->
+<!--                <div class="d-flex mt-4">-->
+<!--                  <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>-->
+<!--                  <div class="ms-3">-->
+<!--                    <div class="fw-bold">Commenter Name</div>-->
+<!--                    And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; Child comment 2&ndash;&gt;-->
+<!--                <div class="d-flex mt-4">-->
+<!--                  <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>-->
+<!--                  <div class="ms-3">-->
+<!--                    <div class="fw-bold">Commenter Name</div>-->
+<!--                    When you put money directly to a problem, it makes a good headline.-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Single comment&ndash;&gt;-->
+<!--            <div class="d-flex">-->
+<!--              <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>-->
+<!--              <div class="ms-3">-->
+<!--                <div class="fw-bold">Commenter Name</div>-->
+<!--                When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
     </div>
     <!-- Side widgets-->
     <div class="col-lg-4">
