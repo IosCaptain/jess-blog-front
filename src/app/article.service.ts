@@ -16,7 +16,7 @@ export class ArticleService {
     return this.http.get<Article[]>(`${this.apiServerUrl}/article/all`)
   }
 
-  public getArticle(articleId: number): Observable<Article> {
+  public getArticle(articleId: string | undefined): Observable<Article> {
     return this.http.get<Article>(`${this.apiServerUrl}/article/${articleId}`)
   }
 
