@@ -13,9 +13,9 @@ export class SrService {
   constructor(private http: HttpClient) { }
 
   public createSR(srObject: ServiceRequest): Observable<ServiceRequest> {
-    return this.http.post<ServiceRequest>(`${this.apiBaseUrl}/add`, srObject)
+    return this.http.post<ServiceRequest>(`${this.apiBaseUrl}/service-request/add`, srObject)
   }
   public getAllSRs(): Observable<ServiceRequest[]> {
-    return this.http.get<ServiceRequest[]>(`${this.apiBaseUrl}/all`)
+    return this.http.get<ServiceRequest[]>(`${this.apiBaseUrl}/service-request/all`)
   }
 }

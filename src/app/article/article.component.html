@@ -18,11 +18,11 @@
           <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
         </header>
         <!-- Preview image figure-->
-        <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
+        <figure class="mb-4"><img class="img-fluid rounded" src="{{article.par1picture}}" alt="..." /></figure>
         <!-- Post content I did this before realizing you can store arrays in a database-->
         <section class="mb-5">
           <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par1title">{{article.par1title}}</h2>
-          <img src="{{article.par1picture}}" *ngIf="article.par1picture">
+<!--          <img src="{{article.par1picture}}" *ngIf="article.par1picture">-->
           <p class="fs-5 mb-4">{{article.par1body}}</p>
 
           <h2 class="fw-bolder mb-4 mt-5" *ngIf="article.par2title">{{article.par2title}}</h2>

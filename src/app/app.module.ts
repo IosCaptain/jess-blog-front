@@ -13,6 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { ArticleComponent } from './article/article.component';
 import {NgxSpinnerModule} from "ngx-spinner";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SrMainPageComponent } from './sr-main-page/sr-main-page.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     NavBarComponent,
     HomeComponent,
     ArticleComponent,
+    PageNotFoundComponent,
+    SrMainPageComponent,
 
   ],
   imports: [
@@ -29,7 +34,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     AppRoutingModule,
     HttpClientModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
   ],
   providers: [ArticleService, SrService],
   bootstrap: [AppComponent],

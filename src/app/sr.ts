@@ -15,5 +15,4 @@ export interface ServiceRequest {
   origin: string;
   height: string;
   goals: string;
-  date: string;
 }

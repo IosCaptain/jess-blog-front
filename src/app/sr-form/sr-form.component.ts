@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ServiceRequest} from "../sr";
 import {SrService} from "../sr.service";
 import {HttpErrorResponse} from "@angular/common/http";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-sr-form',
@@ -10,17 +11,20 @@ import {HttpErrorResponse} from "@angular/common/http";
 })
 export class SrFormComponent implements OnInit {
   allSRs: ServiceRequest[] | undefined;
+  genders: String[] = ["Male", "Female", "Non-Binary", "Other"]
+  createdSRID: number | undefined;
+
 
   constructor(private srService: SrService) { }
 
   ngOnInit(): void {
-    this.getAllSRs()
   }
 
-  public getAllSRs(): void {
-    this.srService.getAllSRs().subscribe(
-      (response: ServiceRequest[]) => {
-        this.allSRs = response
+  public createSR(srObject: NgForm): void {
+    this.srService.createSR(srObject.value).subscribe(
+      (response: ServiceRequest) => {
+        this.createdSRID = response.id;
+        alert(`Your reference number is ${this.createdSRID}, please save it to check your order progress.`)
       },
       (error: HttpErrorResponse) => {
         alert(error.message)
