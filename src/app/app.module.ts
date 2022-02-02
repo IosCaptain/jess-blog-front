@@ -16,6 +16,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SrMainPageComponent } from './sr-main-page/sr-main-page.component';
 import {FormsModule} from "@angular/forms";
+import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {FormsModule} from "@angular/forms";
     ArticleComponent,
     PageNotFoundComponent,
     SrMainPageComponent,
+    AboutPageComponent,
 
   ],
   imports: [

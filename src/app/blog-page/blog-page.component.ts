@@ -11,11 +11,15 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class BlogPageComponent implements OnInit {
   allArticles: Article[] | undefined;
+  article: Article | undefined;
+  featuredArticle: Article | undefined;
 
   constructor(private articleService: ArticleService, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.getAllArticles();
+    // Not in use, tetsed for search bar implementation
+    // this.getArticleById("1");
   }
 
   public getAllArticles(): void {
@@ -23,10 +27,21 @@ export class BlogPageComponent implements OnInit {
     this.articleService.getAllArticles().subscribe(
       (response: Article[]) => {
         this.allArticles = response;
+        this.featuredArticle = this.allArticles[0];
         this.spinner.hide();
       },
       (error: HttpErrorResponse) => {
-        alert(error.message)
+        alert("Not able to get information from Database")
+      }
+    )
+  }
+  public getArticleById(articleId: string): void {
+    this.articleService.getArticle(articleId).subscribe(
+      (response: Article) => {
+        this.article = response;
+      },
+      (error: HttpErrorResponse) => {
+        alert("Not able to find the specified article")
       }
     )
   }
