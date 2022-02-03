@@ -27,7 +27,7 @@ export class BlogPageComponent implements OnInit {
     this.articleService.getAllArticles().subscribe(
       (response: Article[]) => {
         this.allArticles = response;
-        this.featuredArticle = this.allArticles[0];
+        this.featuredArticle = this.allArticles[4];
         this.spinner.hide();
       },
       (error: HttpErrorResponse) => {
