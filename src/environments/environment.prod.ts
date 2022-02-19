@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiBaseUrl: "https://warm-citadel-60577.herokuapp.com/"
 };
