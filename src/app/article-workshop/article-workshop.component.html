@@ -1,1 +1,141 @@
-<p>article-workshop works!</p>
+
+<div id="layoutSidenav">
+  <div id="layoutSidenav_content">
+    <main>
+      <div class="container-fluid px-4">
+        <h1 class="mt-4">Articles Dashboard</h1>
+        <ol class="breadcrumb mb-4">
+          <li class="breadcrumb-item active">Ready. Jess. Go</li>
+        </ol>
+        <div class="row">
+          <div class="col-xl-3 col-md-6">
+            <button class="bg-primary text-white mb-5" data-bs-toggle="modal" data-bs-target="#addArticleModal">
+              <div class="card-body">Create New Article</div>
+<!--              <div class="card-footer d-flex align-items-center justify-content-between">-->
+<!--                <a class="small text-white stretched-link" href="#">View Details</a>-->
+<!--                <div class="small text-white"><i class="fas fa-angle-right"></i></div>-->
+<!--              </div>-->
+            </button>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <button class="card bg-warning text-white mb-5" data-bs-toggle="modal" data-bs-target="#updateArticleModal">
+              <div class="card-body">Update article by ID</div>
+              <!--              <div class="card-footer d-flex align-items-center justify-content-between">-->
+              <!--                <a class="small text-white stretched-link" href="#">View Details</a>-->
+              <!--                <div class="small text-white"><i class="fas fa-angle-right"></i></div>-->
+              <!--              </div>-->
+            </button>
+          </div>
+<!--          <div class="col-xl-3 col-md-6">-->
+<!--            <div class="card bg-success text-white mb-4">-->
+<!--              <div class="card-body">Success Card</div>-->
+<!--              <div class="card-footer d-flex align-items-center justify-content-between">-->
+<!--                <a class="small text-white stretched-link" href="#">View Details</a>-->
+<!--                <div class="small text-white"><i class="fas fa-angle-right"></i></div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+          <div class="col-xl-3 col-md-6">
+            <button class="card bg-danger text-white mb-5" data-bs-toggle="modal" data-bs-target="#deleteArticleModal">
+              <div class="card-body">Delete Article by ID</div>
+              <!--              <div class="card-footer d-flex align-items-center justify-content-between">-->
+              <!--                <a class="small text-white stretched-link" href="#">View Details</a>-->
+              <!--                <div class="small text-white"><i class="fas fa-angle-right"></i></div>-->
+              <!--              </div>-->
+            </button>
+          </div>
+        </div>
+        <div class="row">
+<!--          <div class="col-xl-6">-->
+<!--            <div class="card mb-4">-->
+<!--              <div class="card-header">-->
+<!--                <i class="fas fa-chart-area me-1"></i>-->
+<!--                Area Chart Example-->
+<!--              </div>-->
+<!--              <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>-->
+<!--            </div>-->
+<!--          </div>-->
+          <div class="col-xl-6">
+            <div class="card mb-4">
+              <div class="card-header">
+                <i class="fas fa-chart-bar me-1"></i>
+                Number of Articles
+              </div>
+              <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            DataTable Example
+          </div>
+          <div class="card-body">
+            <table id="datatablesSimple">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Views</th>
+                <th>Date</th>
+              </tr>
+              </thead>
+
+              <tbody>
+              <tr>
+                <td>1</td>
+                <td>System Architect</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+              </tr>
+              </tbody>
+
+              <tfoot>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Views</th>
+                <th>Date</th>
+              </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="py-4 bg-light mt-auto">
+      <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small">
+          <div class="text-muted">Copyright &copy; Ready. Jess. Go 2022</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- Add Employee Modal -->
+<div class="modal fade" id="addArticleModal" tabindex="-1" role="dialog" aria-labelledby="addEmployeeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addEmployeeModalLabel">Add a new Article</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #addForm="ngForm" (ngSubmit)="onAddEmloyee(addForm)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" ngModel name="name" class="form-control" id="name" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" ngModel name="email" class="form-control" id="email" placeholder="Email" required>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
