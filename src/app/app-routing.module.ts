@@ -7,6 +7,7 @@ import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {SrMainPageComponent} from "./sr-main-page/sr-main-page.component";
 import {SrFormComponent} from "./sr-form/sr-form.component";
 import {AboutPageComponent} from "./about-page/about-page.component";
+import {ArticleWorkshopComponent} from "./article-workshop/article-workshop.component";
 
 const routes: Routes = [
   //Blog paths( would like to implement children instead of repeating code)
@@ -20,6 +21,8 @@ const routes: Routes = [
   {path: "service-request/add", component: SrFormComponent},
   //About Page
   {path: "about", component: AboutPageComponent},
+  //Article Workshop
+  {path: "jessica-workshop-article", component: ArticleWorkshopComponent},
   //404
   {path: "**", component: PageNotFoundComponent},
 ];

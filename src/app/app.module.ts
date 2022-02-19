@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SrMainPageComponent } from './sr-main-page/sr-main-page.component';
 import {FormsModule} from "@angular/forms";
 import { AboutPageComponent } from './about-page/about-page.component';
+import { ArticleWorkshopComponent } from './article-workshop/article-workshop.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
     PageNotFoundComponent,
     SrMainPageComponent,
     AboutPageComponent,
+    ArticleWorkshopComponent,
 
   ],
   imports: [
