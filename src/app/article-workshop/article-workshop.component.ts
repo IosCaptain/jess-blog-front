@@ -14,6 +14,6 @@ export class ArticleWorkshopComponent implements OnInit {
   }
 
   onAddEmloyee(addForm: NgForm) {
-    
+
   }
 }

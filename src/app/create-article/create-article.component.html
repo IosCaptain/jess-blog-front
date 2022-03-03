@@ -1,0 +1,317 @@
+
+<section class="bg-light py-5">
+  <div class="container px-5 my-5 px-5">
+    <div class="text-center mb-5">
+      <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+      <h2 class="fw-bolder">Create an Article</h2>
+      <p class="lead mb-0">Please enter as many paragraphs as needed. Have in mind the paragraphs titles will be bold and a little bit separated from the body of the previous paragraph body. The image fields need a URL, ex: "http://my-photo.jpg"</p>
+    </div>
+    <div class="row gx-5 justify-content-center">
+      <div class="col-lg-6">
+        <form id="newArticleForm" #newArticleForm="ngForm" (ngSubmit)="createArticle(newArticleForm)">
+
+          <!-- Title input-->
+          <div class="form-floating mb-3">
+            <input class="form-control" id="name" type="text" placeholder="Title" data-sb-validations="required" ngModel name="title" required/>
+            <label for="name">Article Title</label>
+            <div class="invalid-feedback" data-sb-feedback="name:required">A title is required.</div>
+          </div>
+          <!-- Article Category-->
+          <div class="form-floating mb-3">
+            <input class="form-control" id="category" placeholder="Select Category" type="text" ngModel name="articleCategory" required/>
+            <label for="category">Select Category</label>
+<!--            TODO: Create a dropdown with the 3 categories-->
+          </div>
+
+
+          <!-- Paragraph 1-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par1title" type="text" placeholder="Enter your message here..." ngModel name="par1title"></textarea>
+            <label for="par1title">Paragraph 1 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par1picture" type="text" placeholder="Enter your message here..." ngModel name="par1picture"></textarea>
+            <label for="par1title">Paragraph 1 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par1body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par1body"></textarea>
+            <label for="par1body">Paragraph 1 Body</label>
+          </div>
+
+          <!-- Paragraph 2-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par2title" type="text" placeholder="Enter your message here..." ngModel name="par2title"></textarea>
+            <label for="par2title">Paragraph 2 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par2picture" type="text" placeholder="Enter your message here..." ngModel name="par2picture"></textarea>
+            <label for="par2title">Paragraph 2 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par2body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par2body"></textarea>
+            <label for="par2body">Paragraph 2 Body</label>
+          </div>
+
+          <!-- Paragraph 3-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par3title" type="text" placeholder="Enter your message here..." ngModel name="par3title"></textarea>
+            <label for="par3title">Paragraph 3 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par3picture" type="text" placeholder="Enter your message here..." ngModel name="par3picture"></textarea>
+            <label for="par3title">Paragraph 3 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par3body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par3body"></textarea>
+            <label for="par3body">Paragraph 3 Body</label>
+          </div>
+
+          <!-- Paragraph 4-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par4title" type="text" placeholder="Enter your message here..." ngModel name="par4title"></textarea>
+            <label for="par4title">Paragraph 4 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par4picture" type="text" placeholder="Enter your message here..." ngModel name="par4picture"></textarea>
+            <label for="par4title">Paragraph 4 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par4body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par4body"></textarea>
+            <label for="par4body">Paragraph 4 Body</label>
+          </div>
+
+          <!-- Paragraph 5-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par5title" type="text" placeholder="Enter your message here..." ngModel name="par5title"></textarea>
+            <label for="par5title">Paragraph 5 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par5picture" type="text" placeholder="Enter your message here..." ngModel name="par5picture"></textarea>
+            <label for="par5title">Paragraph 5 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par5body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par5body"></textarea>
+            <label for="par5body">Paragraph 5 Body</label>
+          </div>
+
+          <!-- Paragraph 6-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par6title" type="text" placeholder="Enter your message here..." ngModel name="par6title"></textarea>
+            <label for="par6title">Paragraph 6 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par6picture" type="text" placeholder="Enter your message here..." ngModel name="par6picture"></textarea>
+            <label for="par6title">Paragraph 6 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par6body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par6body"></textarea>
+            <label for="par6body">Paragraph 6 Body</label>
+          </div>
+
+          <!-- Paragraph 7-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par7title" type="text" placeholder="Enter your message here..." ngModel name="par7title"></textarea>
+            <label for="par7title">Paragraph 7 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par7picture" type="text" placeholder="Enter your message here..." ngModel name="par7picture"></textarea>
+            <label for="par7title">Paragraph 7 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par7body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par7body"></textarea>
+            <label for="par7body">Paragraph 7 Body</label>
+          </div>
+
+          <!-- Paragraph 8-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par8title" type="text" placeholder="Enter your message here..." ngModel name="par8title"></textarea>
+            <label for="par8title">Paragraph 8 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par8picture" type="text" placeholder="Enter your message here..." ngModel name="par8picture"></textarea>
+            <label for="par8title">Paragraph 8 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par8body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par8body"></textarea>
+            <label for="par8body">Paragraph 8 Body</label>
+          </div>
+
+          <!-- Paragraph 9-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par9title" type="text" placeholder="Enter your message here..." ngModel name="par9title"></textarea>
+            <label for="par9title">Paragraph 9 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par9picture" type="text" placeholder="Enter your message here..." ngModel name="par9picture"></textarea>
+            <label for="par9title">Paragraph 9 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par9body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par9body"></textarea>
+            <label for="par9body">Paragraph 9 Body</label>
+          </div>
+
+          <!-- Paragraph 10-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par10title" type="text" placeholder="Enter your message here..." ngModel name="par10title"></textarea>
+            <label for="par10title">Paragraph 10 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par10picture" type="text" placeholder="Enter your message here..." ngModel name="par10picture"></textarea>
+            <label for="par10title">Paragraph 10 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par10body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par10body"></textarea>
+            <label for="par10body">Paragraph 10 Body</label>
+          </div>
+
+          <!-- Paragraph 11-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par11title" type="text" placeholder="Enter your message here..." ngModel name="par11title"></textarea>
+            <label for="par11title">Paragraph 11 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par11picture" type="text" placeholder="Enter your message here..." ngModel name="par11picture"></textarea>
+            <label for="par11title">Paragraph 11 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par11body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par11body"></textarea>
+            <label for="par11body">Paragraph 11 Body</label>
+          </div>
+
+          <!-- Paragraph 12-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par12title" type="text" placeholder="Enter your message here..." ngModel name="par12title"></textarea>
+            <label for="par12title">Paragraph 12 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par12picture" type="text" placeholder="Enter your message here..." ngModel name="par12picture"></textarea>
+            <label for="par12title">Paragraph 12 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par12body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par12body"></textarea>
+            <label for="par12body">Paragraph 12 Body</label>
+          </div>
+
+          <!-- Paragraph 13-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par13title" type="text" placeholder="Enter your message here..." ngModel name="par13title"></textarea>
+            <label for="par13title">Paragraph 13 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par13picture" type="text" placeholder="Enter your message here..." ngModel name="par13picture"></textarea>
+            <label for="par13title">Paragraph 13 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par13body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par13body"></textarea>
+            <label for="par13body">Paragraph 13 Body</label>
+          </div>
+
+          <!-- Paragraph 14-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par14title" type="text" placeholder="Enter your message here..." ngModel name="par14title"></textarea>
+            <label for="par14title">Paragraph 14 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par14picture" type="text" placeholder="Enter your message here..." ngModel name="par14picture"></textarea>
+            <label for="par14title">Paragraph 14 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par14body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par14body"></textarea>
+            <label for="par14body">Paragraph 14 Body</label>
+          </div>
+
+          <!-- Paragraph 15-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par15title" type="text" placeholder="Enter your message here..." ngModel name="par15title"></textarea>
+            <label for="par15title">Paragraph 15 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par15picture" type="text" placeholder="Enter your message here..." ngModel name="par15picture"></textarea>
+            <label for="par15title">Paragraph 15 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par15body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par15body"></textarea>
+            <label for="par15body">Paragraph 15 Body</label>
+          </div>
+
+          <!-- Paragraph 16-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par16title" type="text" placeholder="Enter your message here..." ngModel name="par16title"></textarea>
+            <label for="par16title">Paragraph 16 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par16picture" type="text" placeholder="Enter your message here..." ngModel name="par16picture"></textarea>
+            <label for="par16title">Paragraph 16 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par16body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par16body"></textarea>
+            <label for="par16body">Paragraph 16 Body</label>
+          </div>
+
+          <!-- Paragraph 17-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par17title" type="text" placeholder="Enter your message here..." ngModel name="par17title"></textarea>
+            <label for="par17title">Paragraph 17 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par17picture" type="text" placeholder="Enter your message here..." ngModel name="par17picture"></textarea>
+            <label for="par17title">Paragraph 17 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par17body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par17body"></textarea>
+            <label for="par17body">Paragraph 17 Body</label>
+          </div>
+
+          <!-- Paragraph 18-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par18title" type="text" placeholder="Enter your message here..." ngModel name="par18title"></textarea>
+            <label for="par18title">Paragraph 18 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par18picture" type="text" placeholder="Enter your message here..." ngModel name="par18picture"></textarea>
+            <label for="par18title">Paragraph 18 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par18body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par18body"></textarea>
+            <label for="par18body">Paragraph 18 Body</label>
+          </div>
+
+          <!-- Paragraph 19-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par19title" type="text" placeholder="Enter your message here..." ngModel name="par19title"></textarea>
+            <label for="par19title">Paragraph 19 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par19picture" type="text" placeholder="Enter your message here..." ngModel name="par19picture"></textarea>
+            <label for="par19title">Paragraph 19 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par19body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par19body"></textarea>
+            <label for="par19body">Paragraph 19 Body</label>
+          </div>
+
+          <!-- Paragraph 20-->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par20title" type="text" placeholder="Enter your message here..." ngModel name="par20title"></textarea>
+            <label for="par20title">Paragraph 20 Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par20picture" type="text" placeholder="Enter your message here..." ngModel name="par20picture"></textarea>
+            <label for="par20title">Paragraph 20 Picture URL</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea class="form-control" id="par20body" type="text" placeholder="Enter your message here..." style="height: 7rem" ngModel name="par20body"></textarea>
+            <label for="par20body">Paragraph 20 Body</label>
+          </div>
+
+
+          <!-- Submit Button-->
+          <div class="d-grid">
+            <button class="btn btn-dark" id="submitButton" type="submit">Submit</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
